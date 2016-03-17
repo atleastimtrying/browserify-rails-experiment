@@ -1,0 +1,1 @@
+# Create files in this directory to add seed data just for development. See db/seeds/all/example.rb for more.
