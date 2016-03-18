@@ -14,7 +14,6 @@
 //= require jquery_ujs
 //= require_tree .
 
-var request = require('superagent');
 var foo = require('./foo.jsx');
 window.addEventListener('load', function(){
   console.log(foo);
