@@ -13,3 +13,10 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+var init = require('./init');
+
+window.addEventListener('load', function(){
+  init();
+});
+
