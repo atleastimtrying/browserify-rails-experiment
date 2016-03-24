@@ -13,6 +13,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'browserify-rails'
 
+gem 'websocket-rails'
 
 group :development, :test do
     gem 'byebug'
