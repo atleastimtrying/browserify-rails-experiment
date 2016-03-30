@@ -31,8 +31,8 @@ window.addEventListener('load', function(){
     var results = response.body.results;
     store.action('add_results', results);
   });
-  wrapper.setup(WebSocketRails);
-  wrapper.bind('results.result_created', function(result){
+  wrapper.setup(WebSocketRails, 'results');
+  wrapper.bind('result_created', function(result){
     store.action('add_result', result);
   });
   store.subscribe(render);
