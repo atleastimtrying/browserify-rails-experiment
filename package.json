@@ -12,8 +12,9 @@
   "author": "Anders Fisher",
   "license": "ISC",
   "dependencies": {
-    "react": "^0.14.7",
-    "superagent": "^1.8.1"
+    "react": "^0.14.8",
+    "react-dom": "^0.14.8",
+    "superagent": "^1.8.3"
   },
   "devDependencies": {
     "browserify": "^13.0.0",

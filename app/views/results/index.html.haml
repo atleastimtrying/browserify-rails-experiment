@@ -1,7 +1,8 @@
 %h1 Results
-.results
-  - @results.each do |result|
-    .result
-      %p.label= result.label
-      %p.time= result.time
+#display
+  .results
+    - @results.each do |result|
+      .result
+        %p.label= result.label
+        %p.time= result.time
 

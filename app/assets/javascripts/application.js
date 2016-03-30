@@ -14,11 +14,26 @@
 //= require jquery_ujs
 //= require_tree .
 //= require websocket_rails/main
+var request = require('superagent');
+var React = require('react');
+var ReactDOM = require('react-dom');
 var wrapper = require('modules/websockets_wrapper');
+var store = require('modules/store');
+
+var App = require('jsx/app.jsx');
+
+var render = function(state){
+  ReactDOM.render(<App results={state.results} />, document.getElementById('display'));
+};
 
 window.addEventListener('load', function(){
-  wrapper.setup(WebSocketRails);
-  wrapper.bind('results.result_created', function(){
-    console.log('created!', arguments);
+  request.get('/results.json').set('Accept','application/json').end(function(error, response){
+    var results = response.body.results;
+    store.action('add_results', results);
   });
+  wrapper.setup(WebSocketRails);
+  wrapper.bind('results.result_created', function(result){
+    store.action('add_result', result);
+  });
+  store.subscribe(render);
 });
