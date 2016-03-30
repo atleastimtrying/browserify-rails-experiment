@@ -14,15 +14,16 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'browserify-rails'
 
 gem 'websocket-rails'
+gem 'faye-websocket', '0.10.0'
 
 group :development, :test do
-    gem 'byebug'
+  gem 'byebug'
+  gem 'pry'
 end
 
 group :development do
-    gem 'web-console', '~> 2.0'
-
-    gem 'spring'
+  gem 'web-console', '~> 2.0'
+  gem 'spring'
 end
 
 

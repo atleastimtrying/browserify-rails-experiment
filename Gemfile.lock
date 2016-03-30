@@ -134,7 +134,7 @@ GEM
       colorize (~> 0.7)
       ruby_parser (~> 3.7)
     fattr (2.2.2)
-    faye-websocket (0.10.3)
+    faye-websocket (0.10.0)
       eventmachine (>= 0.12.0)
       websocket-driver (>= 0.5.1)
     ffi (1.9.10)
@@ -479,6 +479,7 @@ DEPENDENCIES
   factory_girl_rails
   faker
   fasterer
+  faye-websocket (= 0.10.0)
   guard-bundler
   guard-livereload
   guard-rails
@@ -489,6 +490,7 @@ DEPENDENCIES
   meta_request
   metric_fu
   poltergeist
+  pry
   pry-byebug
   rails (= 4.2.5.1)
   rake-n-bake

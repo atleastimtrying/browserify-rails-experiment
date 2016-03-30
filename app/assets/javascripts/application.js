@@ -15,3 +15,18 @@
 //= require_tree .
 //= require websocket_rails/main
 
+window.addEventListener('load', function(){
+  var dispatcher = new WebSocketRails('localhost:3000/websocket');
+
+  window.addEventListener('click', function(){
+    dispatcher.trigger('results.create', { label: 'window_clicked' }, function(){
+      console.log('success');
+    }, function(){
+      console.log('failed');
+    });
+  });
+
+  dispatcher.bind('results.create_success', function(result) {
+    console.log('successfully created', result);
+  });
+});
