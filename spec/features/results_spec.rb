@@ -7,9 +7,11 @@ describe 'Visiting the results page', javascript: true do
     expect(page).to have_selector ".results .result"
   end
 
-  xit 'shows a new result when it is created' do
+  it 'shows a new result when it is created' do
     visit results_path
-    create(:result)
+
+    CreateResult.call({label:'foo', time: Time.now()})
+
     expect(page).to have_selector ".results .result"
   end
 end
