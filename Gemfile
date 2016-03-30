@@ -12,7 +12,8 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'browserify-rails'
-
+gem 'websocket-rails'
+gem 'faye-websocket', '0.10.0'
 
 group :development, :test do
     gem 'byebug'
@@ -28,6 +29,7 @@ end
 gem 'haml-rails'
 gem 'therubyracer', platforms: :ruby
 gem 'rake-n-bake'
+
 group :development, :test do
   gem 'pry-byebug'
   gem 'factory_girl_rails'
