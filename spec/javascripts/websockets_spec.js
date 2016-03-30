@@ -19,7 +19,7 @@ describe('websockets_wrapper', function(){
     websockets_wrapper.setup(MockedDispatcher);
     var example_callback = function(){};
     websockets_wrapper.bind('Foo', example_callback);
-    expect(mocked_instance.bind).toHaveBeenCalled();
+    expect(mocked_instance.bind).toHaveBeenCalledWith('Foo', example_callback);
   });
 });
 
