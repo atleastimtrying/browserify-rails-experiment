@@ -14,4 +14,11 @@
 //= require jquery_ujs
 //= require_tree .
 //= require websocket_rails/main
+var wrapper = require('modules/websockets_wrapper');
 
+window.addEventListener('load', function(){
+  wrapper.setup(WebSocketRails);
+  wrapper.bind('results.result_created', function(){
+    console.log('created!', arguments);
+  });
+});
