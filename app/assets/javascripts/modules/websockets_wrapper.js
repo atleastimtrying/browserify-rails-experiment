@@ -9,7 +9,13 @@ var bind = function(event, callback){
   channel.bind(event, callback);
 };
 
+var emit = function(event, data){
+  data = data || false;
+  dispatcher.trigger(event, data);
+};
+
 module.exports = {
   setup: setup,
-  bind: bind
+  bind: bind,
+  emit: emit
 };
